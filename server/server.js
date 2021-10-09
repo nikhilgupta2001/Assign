@@ -15,7 +15,9 @@ mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
-
+app.get('/',(req,res)=>{
+    console.log("Hello WOrld");
+})
 app.post('/signup', (req, res) => {
     // console.log(req);
     console.log(req.body);
