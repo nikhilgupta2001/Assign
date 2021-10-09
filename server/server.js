@@ -90,8 +90,8 @@ app.post('/home',(req,res)=>{
    })
 })
 
-
-app.listen(PORT, 'localhost', () => {
+ 
+app.listen(process.end.PORT || PORT, 'localhost', () => {
     console.log("Server is running on", PORT);
 })
 
