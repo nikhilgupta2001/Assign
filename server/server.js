@@ -17,8 +17,9 @@ mongoose.connect(MONGOURI,{
 })
 app.get('/',(req,res)=>{
     console.log("Hello WOrld");
+    res.json("Success");
 })
-app.post('/signup', (req, res) => {
+app.get('/signup', (req, res) => {
     // console.log(req);
     console.log(req.body);
     const { name, email, password } = req.body;
@@ -79,7 +80,7 @@ app.get('/login',(req,res)=>{
 
 })
 
-app.post('/home',(req,res)=>{
+app.get('/home',(req,res)=>{
    var token=req.headers['auth'];
    console.log(req.headers)
    jwt.verify(token,JWT_SECRET,(err,payload)=>{
