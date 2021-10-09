@@ -91,7 +91,7 @@ app.post('/home',(req,res)=>{
 })
 
  
-app.listen(process.end.PORT || PORT, 'localhost', () => {
+app.listen(process.env.PORT || PORT, 'localhost', () => {
     console.log("Server is running on", PORT);
 })
 
