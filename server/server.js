@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express()
-const PORT = 3000;
+var port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const User = require('./models/user.js')
 const jwt = require('jsonwebtoken')
@@ -93,7 +93,7 @@ app.post('/home',(req,res)=>{
 })
 
  
-app.listen(process.env.PORT || PORT, 'localhost', () => {
-    console.log("Server is running on", PORT);
+app.listen(port,  () => {
+    console.log("Server is running on", port);
 })
 
